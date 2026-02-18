@@ -1,0 +1,28 @@
+class Number:
+	def __init__(self,num):
+		self.num=num
+	def addition(self, other:"Number"):
+		print(f"Addition of {self.num} and {other.num} is {self.num+other.num}")
+	def multiplication(self, other:"Number"):
+		print(f"Multiplication of {self.num} and {other.num} is {self.num*other.num}")
+	def sub(self, other:"Number"):
+		print(f"Subtraction of {self.num} and {other.num} is {self.num-other.num}")
+#non static methods
+class Calculator:
+	def addition(num1:"Number", num2:"Number"):
+		print(f"Addition of {num1.num} and {num2.num} is {num1.num+num2.num}")
+	def multiplication(num1:"Number", num2:"Number"):
+		print(f"Multiplication of {num1.num} and {num2.num} is {num1.num*num2.num}")
+	def sub(num1:"Number", num2:"Number"):
+		strin = f"Subtraction of {num1.num} and {num2.num} is {num1.num-num2.num}"
+		# print(strin)
+		return strin
+
+n1=Number(4)
+n2=Number(5)
+n1.addition(n2)
+n1.multiplication(n2)
+n1.sub(n2)
+Calculator.addition(n1, n2)
+Calculator.sub(n1, n2)
+Calculator.multiplication(n1, n2)

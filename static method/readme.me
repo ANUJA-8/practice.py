@@ -1,0 +1,33 @@
+Instance method
+static method: dont need to create object of class 
+class object
+object: An object is an instance of a class.
+    A class is like a blueprint.
+    An object is the actual thing created from that blueprint.
+    Everything in Python is an object — numbers, strings, lists, functions, even classes.
+
+##Example
+class Car:
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+    def drive(self):
+        print(f"{self.brand} car is driving")
+
+# Creating an object
+car1 = Car("Toyota", "Red")
+
+print(car1.brand)   # Toyota
+car1.drive()        # Toyota car is driving
+
+############
+Here:
+Car → Class (blueprint)
+car1 → Object (instance of Car)
+brand, color → Attributes
+drive() → Method
+
+###########
+In Python, "self" refers to the current object of the class.
+When you create multiple objects from a class, each object has its own data.

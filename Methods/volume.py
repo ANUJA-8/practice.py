@@ -1,0 +1,25 @@
+class Volume:
+	def __init__(self,level:int):
+		self.level=level
+		print(f"{self.level} is the current volume")
+	def volume_button_up(self,no_times:int)->int:
+		self.level+=no_times
+		print(f"{self.level}Volume Incresed")
+	def volume_button_down(self,no_times:int)->int:
+		self.level-=no_times
+		print(f"{self.level}Volume Decresed")
+	def volume_mute(self):
+		self.level=0
+		print(f"{self.level}Volume Muted")
+vol=Volume(3)
+vol1=Volume(7)
+vol1.volume_button_down(4)
+vol1.volume_button_up(5)
+vol.volume_button_up(2)
+vol.volume_button_down(4)
+vol.volume_mute()
+
+
+
+
+	

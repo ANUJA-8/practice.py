@@ -1,0 +1,75 @@
+🔹 1️⃣ Non-Static Method (Instance Method)
+✔ Uses self
+✔ Works with object data
+✔ Needs object to call
+Example:
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display(self):   # Non-static method
+        print(f"Name: {self.name}, Marks: {self.marks}")
+
+
+s1 = Student("Anuja", 90)
+s1.display()
+
+# Why is this non-static?
+
+It uses self
+
+It accesses object variables (self.name)
+
+It must be called using object (s1.display())
+
+🔹 2️⃣ Static Method
+✔ Does NOT use self
+✔ Does NOT access object data
+✔ Uses @staticmethod
+✔ Can be called using class name
+Example:
+class Calculator:
+
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+
+print(Calculator.add(10, 5))
+
+# Why is this static?
+
+No self
+
+Works only with given parameters
+
+Doesn’t depend on object data
+
+####Side-by-Side Difference
+Feature	                Non-Static Method	Static Method
+Uses self	                Yes	             No
+Access object variables	    Yes	             No
+Needs object to call	    Yes	             Not required
+Decorator needed	        No	             @staticmethod
+Memory access	            Instance level	 Class level
+
+## Simple Real-Life Example
+# Bank Account
+class BankAccount:
+
+    def __init__(self, balance):
+        self.balance = balance
+
+    def deposit(self, amount):      # Non-static
+        self.balance += amount
+
+    @staticmethod
+    def bank_policy():              # Static
+        print("Minimum balance is 1000")
+
+Calling:
+acc = BankAccount(5000)
+
+acc.deposit(1000)        # Non-static
+BankAccount.bank_policy() # Static  

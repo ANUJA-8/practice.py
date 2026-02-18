@@ -1,0 +1,18 @@
+class Auto_charger:
+	def __init__(self):
+		self.charging_on=False
+		self.charging=0
+		self.full_charge=100
+	def chargering_is_on(self,charge:int):
+		self.charging_on=True
+		if 100>self.charging=0
+			self.charging+=charge
+			print("Charging is on")
+		print("Charging is full")
+		self.charger_off
+	def charger_off(self):
+		self.charging_on= False
+		print(f"Charging is off as the charging is {self.charging}")
+charge_o=Auto_charger()
+charge_o.charging_is_on(4)
+charge_o.charger_off()
