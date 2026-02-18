@@ -3,7 +3,7 @@ balance
 method add_money(amount)
 Create class Transaction:
 static method that deposits money into wallet'''
-
+#add Money in wallet 
 class Wallet:
 	def __init__(self,balance:int):
 		self.balance=balance
