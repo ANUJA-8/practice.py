@@ -1,0 +1,260 @@
+'''Create class Product with:
+name, price
+method is_expensive() → True if price > 5000
+Create class Store with static method to print whether product is expensive.'''
+
+class Product:
+	def __init__(self,name:str,price:int):
+		self.name=name
+		self.price=price
+		
+	def is_expensive(self):
+		if self.price>=5000:
+			return "Product is expensive"
+		return "Product is not expensive"
+		
+class Store:
+	def check_pr_isexp(product_obj:Product):
+		product_obj.is_expensive()
+		
+pr=Product("Laptop", 50000)
+Store.check_pr_isexp(pr)
+##########################
+
+'''Create class Circle:
+radius
+method area()
+Create class ShapeFactory:
+static method that creates a Circle object
+prints its area'''
+
+class Circle:
+	def __init__(self,radius:int):
+		self.radius=radius
+		
+	def area(self):
+		return 3.14*self.radius*self.radius
+		
+class ShapeFactory:
+	def area_circle(rad:Circle):
+		# circle=Circle(radius)
+		print(f"Area of circle with radius {rad.radius}cm is {rad.area()}cm^2")
+		
+r=Circle(4)
+ShapeFactory.area_circle(r)
+
+#####################
+'''Create class Wallet:
+balance
+method add_money(amount)
+Create class Transaction:
+static method that deposits money into wallet'''
+
+class Wallet:
+	def __init__(self,balance:int):
+		self.balance=balance
+	def add_money(self,amount):
+		self.balance+=amount
+		
+class Transaction:
+	def deposits(total:Wallet,amount):
+		print(f"{total.add_money(amount)} is added to the wallet. Current balance is {total.balance}")
+		
+bal=Wallet(40000)
+Transaction.deposits(bal, 5000)
+
+#############
+'''Create class Employee:
+name, salary
+method annual_salary()
+Create class SalaryCalculator:
+static method that returns annual salary'''
+
+class Employee:
+	def __init__(self,name:str,salary:int):
+		self.name=name
+		self.salary=salary
+	def annual_salary(self):
+		an_salary=0
+		an_salary=12*self.salary
+		return an_salary
+	
+class SalaryCalculator:
+	def annual_sal(sal:Employee):
+		# a_salary = sal.annual_salary()
+		# print(f"Annual salary of {sal.name} is {a_salary}")
+		print(f"{sal.annual_salary()} --- {sal.name}'s annual salary")
+		
+s=Employee("Anuja", 50000)
+SalaryCalculator.annual_sal(s)
+
+###############
+'''Create class Student:
+name, marks
+method get_marks()
+Create class TopperFinder:
+static method that compares two students
+prints topper name'''
+class Student:
+	def __init__(self,name:str, marks:int):
+		self.name=name
+		self.marks=marks
+	def get_marks(self):
+		return self.marks	
+class Topper:
+	def Topper_name(m1:Student,m2:Student):
+		if m1.get_marks()>m2.get_marks():
+			print(f"{m1.name} is topper")
+		elif m1.get_marks()== m2.get_marks():
+			print(f" Both have equal marks")
+		print(f"{m2.name} is topper")
+		
+st1=Student.("Anuja", 40)
+st2=Student.("Akash", 50)
+Topper.Topper_name(st1,st2)
+
+################
+'''Create class Product:
+name, price
+method increase_price(percent)
+Create class PriceManager:
+static method that increases product price by given percent
+prints updated price'''
+
+class Product:
+	def __init__(self,name:str,price:int):
+		self.name=name
+		self.price=price
+	def increase_price(percent):
+		return percent
+		#self.price= self.price *percent/100
+		
+class PriceManager:
+	def updated_price(p:Product,percent):
+		updated_price = p.price + (p.price * percent / 100)
+		print(f"Updated price of {p.name} is {updated_price}")
+		
+per=Product("Laptop", 50000)
+PriceManager.updated_price(per,20)
+
+###############
+'''Create class User:
+username, password
+method check_password_length()
+Create class Validator:
+static method that prints if password is valid (length ≥ 8)'''
+		
+class User:
+	def __init__(self,username:str,password):
+		self.username=username
+		self.password=password
+	def check_password_length(self):
+		length=len(self.password)
+		return length
+class Validator:
+	def valid_len(l:User):
+		if l.check_password_length()>=8:   #use method of previous class instead of using the variable(length) directly
+			return f"{l.password} is valid"  #you can use return here but if you return here you have to print the function call and if you use print here then you can directly call the function without print
+		else:
+			return f"{l.password} is not valid"
+		# if l.check_password_length()>=8:
+        # 	print(f"{l.password} is valid")
+		# else:
+		# 	print(f"{l.password} is not valid")
+		
+p=User("Akash","Akash@123")
+print(Validator.valid_len(p))
+# Validator.valid_len(p) #if you use print in the function then you can directly call the function without print and if you use return then you have to print the function call to see the output
+
+#########################
+
+'''Create class Rectangle:
+length, width
+method area()
+method perimeter()
+Create class Geometry:
+static method that prints both area and perimeter'''
+
+class Rectangle:
+	def __init__(self,length:int,width:int):
+		self.length=length
+		self.width=width
+	def area(self):
+		area=self.length*self.width
+		return area
+	def perimeter(self):
+		perimeter= 2*(self.length+self.width)
+		return perimeter
+		
+class Geometry:
+	def area_peri(g:Rectangle):
+		print(f"Area of the rectangle is {g.area()} and perimeter is {g.perimeter()}")
+		
+g1=Rectangle(5,4)
+Geometry.area_peri(g1)
+################################
+'''Create class Counter:
+count
+method increment()
+Create class CounterManager:
+static method that resets count to 0'''
+
+class Counter:
+	def __init__(self,count:int):
+		self.count=count
+	def increment(self):
+		return count+=1
+class CounterManager:
+	
+##############
+'''Create class Car:
+brand, speed
+method is_speeding() (True if speed > 80)
+Create class TrafficPolice:
+static method that returns fine message if speeding'''
+class Car:
+	def __init__(self,brand:str,speed:int):
+		self.brand=brand
+		self.speed=speed
+	def is_speeding(self):
+		return self.speed> 80
+		
+class TrafficPolice:
+	def fine(f:Car):
+		if f.is_speeding():
+			print(f"Apply fine {f.brand}")
+		else:
+			print(f"No fine {f.brand}")
+			
+		
+fi=Car("Honda",70)
+TrafficPolice.fine(fi)
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
