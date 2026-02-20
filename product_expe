@@ -229,6 +229,9 @@ class TrafficPolice:
 		
 fi=Car("Honda",70)
 TrafficPolice.fine(fi)
+
+#######################
+
 		
 
 
