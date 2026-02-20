@@ -1,0 +1,71 @@
+Change GitHub Account Used for Push (Very Important)
+
+If you want to push using a different GitHub account, do this:
+
+🔹 Step 1: Remove Old Credentials (Windows)
+
+Open Credential Manager:
+
+Press Windows + R
+
+Type:
+
+control keymgr.dll
+
+
+Go to Windows Credentials
+
+Remove entries related to:
+
+git:https://github.com
+
+🔹 Step 2: Push Again
+
+Now run:
+
+git push
+
+
+It will ask for login again.
+
+👉 Enter:
+
+New GitHub email
+
+New GitHub Personal Access Token (not password)
+
+✅ 3️⃣ If Using SSH Instead of HTTPS
+
+Check remote URL:
+
+git remote -v
+
+
+If it shows:
+
+git@github.com:username/repo.git
+
+
+Then you’re using SSH.
+
+You must:
+
+Create new SSH key
+
+Add it to new GitHub account
+
+Update SSH config
+
+Tell me if you're using SSH and I’ll guide step-by-step.
+
+✅ 4️⃣ Change Repository Remote Account (If Repo Belongs to Another Account)
+
+If you forked or want to push to another GitHub account’s repo:
+
+git remote set-url origin https://github.com/newusername/repository.git
+
+🎯 Quick Summary
+What You Want	Solution
+Change commit name/email	git config user.name / user.email
+Change GitHub login account	Remove credentials from Windows
+Push to different repo	Change remote URL
