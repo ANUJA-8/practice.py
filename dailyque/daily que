@@ -1,0 +1,87 @@
+#daily questions
+#Second Largest Element in an Array
+class SecLarge:
+
+	def secondLargest(arr):
+		arr=list(set(arr))
+		arr.sort()
+		if len(arr)>=2:
+			return f"second largest number is {arr[-2]}"
+		return -1
+###############################			
+ar= list(map(int,input("Type numbers of array separated by space").split()))
+SecLarge.secondLargest(ar)
+
+#Third largest element in an array of distinct elements
+class ThirdLarge:
+	def third_large(arr):
+		arr=list(set(arr))
+		arr.sort()
+		if len(arr)<3:
+			return "no third element exist"
+		else:
+			return f"Third largest element is {arr[-3]}"
+
+ar=list(map(int,input("array number using space").split())
+ThirdLarge.third_large(ar)
+
+##############################################################
+#Array Reverse
+class Reverse:
+	def rev_arr(arr):
+		if len(arr)>=2:
+			return rev(arr)
+		else:
+			return "threre is no value in array"
+ar=list(map(int,input("Input the array in space").split()))
+Reverse.rev_arr(ar)
+
+################
+
+#Reverse an Array in groups of given size
+class Reve_group_ar:
+	def reve_grp(arr,k):
+		result=[]
+		for i in range(0,len(arr),k):
+			result.extend(arr[i:i+k][::-1])
+		return result
+#ar=list(map(int,input("Array with space").split()))
+ar=[2,4,3,5,6,4,7]
+Reve_group_ar.reve_grp(ar,3)
+
+##########################
+#Rotate an Array by d - Counterclockwise or Left
+class RotateAr:
+	def rotate_ar(ar,n):
+		result=[]
+		for i in range(0,len(ar)):
+			if i == n:
+				result.extend(ar[i+1:len(ar)]
+				return result
+			return result.extend(ar[0:i])
+a=[2,3,4,6,5,7]			
+Rotate.rotate_ar(a,3)
+			
+########################
+#Given an integer array, find a maximum product of a triplet in the array.
+#Input:  arr[ ] = [10, 3, 5, 6, 20]
+#Output: 1200
+#Explanation: Multiplication of 10, 6 and 20
+#Input: arr[ ] =  [1, -4, 3, -6, 7, 0]
+#Output: 168
+
+class MaxProd:
+	def max_product(arr):
+		new_ar=[]
+		arr.sort()
+		print(arr)
+		c=arr[-3:]
+		print(c)
+		ans=1
+		for i in c:
+		  ans=ans*i
+		print(ans)
+
+
+ar=[-10, -3, -5, -6, -20]
+MaxProd.max_product(ar)
