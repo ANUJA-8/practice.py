@@ -1,3 +1,33 @@
 # Find Maximum Element of grid
 def maxOfGrid(grid):
-    
+	max_val=grid[0][0]
+    for r in grid:
+		for j in r:
+			if j>max_val:
+				max_val=j
+	return max_val
+		
+			
+################
+s="bgd47238hgfe"
+s1=list(s)
+print(s1)
+sum=0
+for i in s:
+	if i.isdigit:
+		sum+=int(i)
+	print(sum)
+	
+############
+a=[1,2,3,4,6,5,7,9]
+a.sort()
+print(a[len(a)-2])
+#########
+a=[1,2,3,4,6,5,7,9]
+sec_max
+######
+
+
+
+		
+	
