@@ -3,3 +3,4 @@ def test_playwright(playwright): #playwright is an fixture here and no need to c
     context= browser.new_context()
     page= context.new_page()
     page.goto("https://www.udemy.com/")
+    page.close()
